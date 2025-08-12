@@ -29,16 +29,16 @@ describe('WakeLockToggle', () => {
   it('renders correctly when wake lock is inactive', () => {
     const wrapper = mount(WakeLockToggle)
     
-    expect(wrapper.find('button').text()).toBe('ウェイクロックを有効化')
-    expect(wrapper.text()).toContain('Wake Lock: Inactive')
+    expect(wrapper.find('button').text()).toBe('画面スリープ防止を有効化')
+    expect(wrapper.text()).toContain('現在の状態：無効')
   })
 
   it('renders correctly when wake lock is active', () => {
     mockUseWakeLock.isActive.value = true
     const wrapper = mount(WakeLockToggle)
     
-    expect(wrapper.find('button').text()).toBe('ウェイクロックを解除')
-    expect(wrapper.text()).toContain('Wake Lock: Active')
+    expect(wrapper.find('button').text()).toBe('画面スリープ防止を解除')
+    expect(wrapper.text()).toContain('現在の状態：有効')
   })
 
   it('shows correct button styling when active', () => {

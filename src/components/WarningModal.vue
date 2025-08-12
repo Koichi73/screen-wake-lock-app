@@ -41,7 +41,7 @@
                   id="modal-title"
                   class="text-lg sm:text-xl font-semibold text-gray-900 flex-1"
                 >
-                  ウェイクロックについて
+                  画面スリープ防止機能について
                 </h2>
                 <button
                   @click="handleBackdropClick"
@@ -61,17 +61,18 @@
                 class="text-gray-700 mb-6 sm:mb-8 text-left"
               >
                 <p class="mb-3 sm:mb-4 text-sm sm:text-base">
-                  ウェイクロックは以下の行動によって解除されます：
+                  画面スリープ防止機能は、ブラウザで本webページを表示している間だけ有効です。以下のいずれかの操作を行うと、自動的に解除されます：
                 </p>
                 <ul 
                   class="list-decimal list-inside space-y-2 sm:space-y-3 ml-4 text-sm sm:text-base"
                   role="list"
                 >
-                  <li>他のタブに変える</li>
+                  <li>他のタブに切り替える</li>
                   <li>ブラウザを閉じる</li>
+                  <li>他のアプリを画面の前面に表示する</li>
                 </ul>
-                <p class="mt-4 sm:mt-6 text-xs sm:text-sm text-gray-600">
-                  この情報を理解した上で、ウェイクロック機能を使用してください。
+                <p class="mt-4 sm:mt-6 text-sm sm:text-base">
+                  この内容を理解した上でご利用ください。
                 </p>
               </div>
               

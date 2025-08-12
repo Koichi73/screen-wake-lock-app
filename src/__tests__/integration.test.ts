@@ -42,11 +42,11 @@ describe('Integration Tests - Complete User Workflows', () => {
       await nextTick()
 
       // Check main UI elements are present
-      expect(wrapper.text()).toContain('スリープ防止ウェブページ')
+      expect(wrapper.text()).toContain('画面スリープ防止アプリ')
       expect(wrapper.text()).toContain('画面をスリープさせずに表示を維持します')
-      expect(wrapper.text()).toContain('ウェイクロックを有効化')
-      expect(wrapper.text()).toContain('Wake Lock: Inactive')
-      expect(wrapper.text()).toContain('このアプリケーションはScreen Wake Lock APIを使用して')
+      expect(wrapper.text()).toContain('画面スリープ防止を有効化')
+      expect(wrapper.text()).toContain('現在の状態：無効')
+      expect(wrapper.text()).toContain('このアプリケーションはお使いのデバイスの画面が')
     })
 
     it('should have proper accessibility attributes', async () => {
@@ -67,7 +67,7 @@ describe('Integration Tests - Complete User Workflows', () => {
       await nextTick()
 
       // Toggle button should be present and enabled
-      const toggleButton = wrapper.findAll('button').find(btn => btn.text().includes('ウェイクロックを有効化'))
+      const toggleButton = wrapper.findAll('button').find(btn => btn.text().includes('画面スリープ防止を有効化'))
       expect(toggleButton).toBeTruthy()
       expect(toggleButton!.attributes('disabled')).toBeUndefined()
     })
@@ -95,7 +95,7 @@ describe('Integration Tests - Complete User Workflows', () => {
       expect(toggleButton!.attributes('disabled')).toBeDefined()
       
       // Status should show inactive
-      expect(wrapper.text()).toContain('Wake Lock: Inactive')
+      expect(wrapper.text()).toContain('現在の状態：無効')
     })
   })
 
@@ -114,8 +114,8 @@ describe('Integration Tests - Complete User Workflows', () => {
       await nextTick()
 
       // Should have WakeLockToggle component functionality
-      expect(wrapper.text()).toContain('ウェイクロックを有効化')
-      expect(wrapper.text()).toContain('Wake Lock: Inactive')
+      expect(wrapper.text()).toContain('画面スリープ防止を有効化')
+      expect(wrapper.text()).toContain('現在の状態：無効')
       
       // Should have WarningModal component (initially hidden)
       expect(wrapper.find('[role="dialog"]').exists()).toBe(false)
@@ -126,10 +126,10 @@ describe('Integration Tests - Complete User Workflows', () => {
       await nextTick()
 
       // Initial state should be inactive
-      expect(wrapper.text()).toContain('Wake Lock: Inactive')
+      expect(wrapper.text()).toContain('現在の状態：無効')
       
       // Button should be enabled for supported browsers
-      const toggleButton = wrapper.findAll('button').find(btn => btn.text().includes('ウェイクロックを有効化'))
+      const toggleButton = wrapper.findAll('button').find(btn => btn.text().includes('画面スリープ防止を有効化'))
       expect(toggleButton!.attributes('disabled')).toBeUndefined()
     })
   })
@@ -148,16 +148,16 @@ describe('Integration Tests - Complete User Workflows', () => {
       await nextTick()
 
       // Requirement 1: Prevent screen from sleeping - toggle functionality present
-      expect(wrapper.text()).toContain('ウェイクロックを有効化')
-      expect(wrapper.text()).toContain('Wake Lock: Inactive')
+      expect(wrapper.text()).toContain('画面スリープ防止を有効化')
+      expect(wrapper.text()).toContain('現在の状態：無効')
 
       // Requirement 2: Toggle functionality - button is present and functional
-      const toggleButton = wrapper.findAll('button').find(btn => btn.text().includes('ウェイクロックを有効化'))
+      const toggleButton = wrapper.findAll('button').find(btn => btn.text().includes('画面スリープ防止を有効化'))
       expect(toggleButton).toBeTruthy()
       expect(toggleButton!.attributes('disabled')).toBeUndefined()
 
       // Requirement 3: Status display - current status is shown
-      expect(wrapper.text()).toContain('Wake Lock: Inactive')
+      expect(wrapper.text()).toContain('現在の状態：無効')
 
       // Requirement 4: Warning modal - modal component is integrated
       expect(wrapper.findComponent({ name: 'WarningModal' }).exists()).toBe(true)

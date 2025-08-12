@@ -2,7 +2,7 @@
   <div 
     class="min-h-screen bg-gray-50 py-4 px-4 sm:py-8 sm:px-6 lg:px-8"
     role="main"
-    aria-label="スリープ防止ウェブアプリケーション"
+    aria-label="画面スリープ防止webアプリケーション"
   >
     <div class="max-w-md mx-auto">
       <!-- Skip to main content link for screen readers -->
@@ -27,7 +27,7 @@
             id="app-title"
             class="text-2xl sm:text-3xl font-bold text-gray-900 mb-2"
           >
-            スリープ防止ウェブページ
+            画面スリープ防止アプリ
           </h1>
           <p 
             class="text-gray-600 text-sm sm:text-base"
@@ -54,8 +54,8 @@
               class="text-xs sm:text-sm text-gray-500 leading-relaxed"
               role="note"
             >
-              このアプリケーションはScreen Wake Lock APIを使用して<br class="hidden sm:inline">
-              デバイスの画面が自動的にスリープすることを防ぎます
+              このアプリケーションはお使いのデバイスの画面が<br class="hidden sm:inline">
+              自動的にスリープするのを防ぎます。
             </p>
           </div>
         </footer>

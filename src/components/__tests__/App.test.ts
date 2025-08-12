@@ -56,7 +56,7 @@ describe('App.vue', () => {
 
     // Check main structure
     expect(wrapper.find('[role="main"]').exists()).toBe(true)
-    expect(wrapper.find('#app-title').text()).toBe('スリープ防止ウェブページ')
+    expect(wrapper.find('#app-title').text()).toBe('画面スリープ防止アプリ')
     expect(wrapper.find('#app-description').exists()).toBe(true)
     
     // Check components are rendered
@@ -68,7 +68,7 @@ describe('App.vue', () => {
     wrapper = mount(App)
 
     const main = wrapper.find('[role="main"]')
-    expect(main.attributes('aria-label')).toBe('スリープ防止ウェブアプリケーション')
+    expect(main.attributes('aria-label')).toBe('画面スリープ防止webアプリケーション')
     
     const skipLink = wrapper.find('a[href="#main-content"]')
     expect(skipLink.exists()).toBe(true)

@@ -175,11 +175,11 @@ const buttonText = computed(() => {
   if (!isSupported.value) {
     return 'サポートされていません'
   }
-  return isActive.value ? 'ウェイクロックを解除' : 'ウェイクロックを有効化'
+  return isActive.value ? '画面スリープ防止を解除' : '画面スリープ防止を有効化'
 })
 
 const statusText = computed(() => {
-  return isActive.value ? 'Wake Lock: Active' : 'Wake Lock: Inactive'
+  return isActive.value ? '現在の状態：有効' : '現在の状態：無効'
 })
 
 // Computed properties for accessibility

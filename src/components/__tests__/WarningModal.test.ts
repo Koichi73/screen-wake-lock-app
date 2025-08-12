@@ -33,7 +33,7 @@ describe('WarningModal', () => {
 
     expect(document.querySelector('[role="dialog"]')).toBeTruthy()
     expect(document.querySelector('#modal-title')).toBeTruthy()
-    expect(document.querySelector('#modal-title')?.textContent?.trim()).toBe('ウェイクロックについて')
+    expect(document.querySelector('#modal-title')?.textContent?.trim()).toBe('画面スリープ防止機能について')
   })
 
   it('does not render modal when isVisible is false', async () => {
@@ -60,9 +60,10 @@ describe('WarningModal', () => {
     await nextTick()
 
     const modalContent = document.querySelector('[role="dialog"]')
-    expect(modalContent?.textContent).toContain('ウェイクロックは以下の行動によって解除されます')
-    expect(modalContent?.textContent).toContain('他のタブに変える')
+    expect(modalContent?.textContent).toContain('画面スリープ防止機能は、ブラウザで本webページを表示している間だけ有効です。以下のいずれかの操作を行うと、自動的に解除されます：')
+    expect(modalContent?.textContent).toContain('他のタブに切り替える')
     expect(modalContent?.textContent).toContain('ブラウザを閉じる')
+    expect(modalContent?.textContent).toContain('他のアプリを画面の前面に表示する')
   })
 
   it('displays confirmation button with correct text', async () => {
@@ -471,11 +472,12 @@ describe('WarningModal', () => {
       const modalContent = document.querySelector('[role="dialog"]')
       const textContent = modalContent?.textContent || ''
 
-      expect(textContent).toContain('ウェイクロックについて')
-      expect(textContent).toContain('ウェイクロックは以下の行動によって解除されます')
-      expect(textContent).toContain('他のタブに変える')
+      expect(textContent).toContain('画面スリープ防止機能について')
+      expect(textContent).toContain('画面スリープ防止機能は、ブラウザで本webページを表示している間だけ有効です。以下のいずれかの操作を行うと、自動的に解除されます：')
+      expect(textContent).toContain('他のタブに切り替える')
       expect(textContent).toContain('ブラウザを閉じる')
-      expect(textContent).toContain('この情報を理解した上で')
+      expect(textContent).toContain('他のアプリを画面の前面に表示する')
+      expect(textContent).toContain('この内容を理解した上でご利用ください。')
       expect(textContent).toContain('理解した')
     })
 
@@ -495,7 +497,7 @@ describe('WarningModal', () => {
       expect(list?.classList.contains('list-inside')).toBe(true)
 
       const listItems = list?.querySelectorAll('li')
-      expect(listItems?.length).toBe(2)
+      expect(listItems?.length).toBe(3)
     })
   })
 })
