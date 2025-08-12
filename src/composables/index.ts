@@ -1,0 +1,1 @@
+export { useWakeLock, type UseWakeLock } from './useWakeLock'
