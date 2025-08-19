@@ -4,12 +4,14 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('../views/HomeView.vue')
+    component: () => import('../views/HomeView.vue'),
+    meta: { title: 'ホーム' }
   },
   {
     path: '/clock',
     name: 'Clock',
-    component: () => import('../views/ClockView.vue')
+    component: () => import('../views/ClockView.vue'),
+    meta: { title: '時計', showBackButton: true }
   }
 ];
 
