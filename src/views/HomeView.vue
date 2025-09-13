@@ -31,18 +31,10 @@
       </section>
       
       <!-- Info Section -->
-      <footer class="mt-8 pt-6 border-t border-gray-200">
-        <div class="text-center">
-          <p class="text-xs sm:text-sm text-gray-500 leading-relaxed">
-            このアプリケーションはお使いのデバイスの画面が<br class="hidden sm:inline">
-            自動的にスリープするのを防ぎます。
-          </p>
-        </div>
-      </footer>
     </div>
 
     <!-- Feature Selection -->
-    <div class="mt-8">
+    <div class="mt-16">
       <h2 class="text-lg font-semibold text-gray-800 mb-4 text-center">追加機能</h2>
       <div class="space-y-4">
         <!-- Clock Card -->
