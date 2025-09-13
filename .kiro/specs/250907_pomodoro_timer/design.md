@@ -94,7 +94,6 @@ interface TimerConfig {
 **主要メソッド**:
 - `startTimer()`: タイマー開始
 - `pauseTimer()`: タイマー一時停止
-- `resumeTimer()`: タイマー再開
 - `resetTimer()`: タイマーリセット
 - `switchSession()`: セッション切り替え（作業↔休憩）
 
