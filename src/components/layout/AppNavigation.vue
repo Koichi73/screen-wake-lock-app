@@ -2,7 +2,7 @@
   <header class="bg-white shadow-sm sticky top-0 z-10">
     <div class="max-w-md mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
-        <div class="flex-1 min-w-0">
+        <div class="min-w-0">
           <button 
             v-if="showBackButton" 
             @click="goBack"
@@ -15,11 +15,11 @@
           </button>
         </div>
         <div class="flex-1 min-w-0 text-center">
-          <h1 class="text-lg font-medium text-gray-900 truncate">
+          <h1 class="text-lg font-medium text-gray-900">
             {{ currentPageTitle }}
           </h1>
         </div>
-        <div class="flex-1"></div>
+        <div class="w-6"></div>
       </div>
     </div>
   </header>
