@@ -95,7 +95,7 @@ export function usePomodoro(config?: Partial<TimerConfig>) {
     state.isRunning = false;
     state.isPaused = false;
     state.sessionType = 'work';
-    state.cycleCount = 1;
+    state.cycleCount = 0;
     state.remainingTime = state.workDuration;
     state.totalTime = state.workDuration;
   };
