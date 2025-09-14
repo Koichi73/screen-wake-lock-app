@@ -31,37 +31,52 @@
       </section>
       
       <!-- Info Section -->
-      <footer class="mt-8 pt-6 border-t border-gray-200">
-        <div class="text-center">
-          <p class="text-xs sm:text-sm text-gray-500 leading-relaxed">
-            このアプリケーションはお使いのデバイスの画面が<br class="hidden sm:inline">
-            自動的にスリープするのを防ぎます。
-          </p>
-        </div>
-      </footer>
     </div>
 
     <!-- Feature Selection -->
-    <div class="mt-8">
+    <div class="mt-16">
       <h2 class="text-lg font-semibold text-gray-800 mb-4 text-center">追加機能</h2>
-      <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-        <router-link 
-          to="/clock"
-          class="block p-6 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-          aria-label="時計機能ページへ移動"
-        >
-          <div class="flex items-center">
-            <div class="flex-shrink-0">
-              <svg class="h-8 w-8 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
+      <div class="space-y-4">
+        <!-- Clock Card -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <router-link 
+            to="/clock"
+            class="block p-6 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            aria-label="時計機能ページへ移動"
+          >
+            <div class="flex items-center">
+              <div class="flex-shrink-0">
+                <svg class="h-8 w-8 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-bold text-gray-900">時計表示</h3>
+                <p class="text-sm text-gray-600 mt-1">時刻を常に表示し、画面のスリープを防ぎます。</p>
+              </div>
             </div>
-            <div class="ml-4">
-              <h3 class="text-lg font-bold text-gray-900">時計表示</h3>
-              <p class="text-sm text-gray-600 mt-1">時刻を常に表示し、画面のスリープを防ぎます。</p>
+          </router-link>
+        </div>
+        <!-- Pomodoro Card -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <router-link 
+            to="/pomodoro"
+            class="block p-6 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+            aria-label="ポモドーロタイマー機能ページへ移動"
+          >
+            <div class="flex items-center">
+              <div class="flex-shrink-0">
+                <svg class="h-8 w-8 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-bold text-gray-900">ポモドーロタイマー</h3>
+                <p class="text-sm text-gray-600 mt-1">作業と休憩のサイクルを管理し、集中力を高めます。</p>
+              </div>
             </div>
-          </div>
-        </router-link>
+          </router-link>
+        </div>
       </div>
     </div>
     
